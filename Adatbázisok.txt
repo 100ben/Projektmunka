@@ -1,0 +1,12 @@
+Kamrapp
+
+
+
+Adatbázisok:
+
+1 Otthoni leltár lejárati dátumokkal
+2 Mi érhető el a boltból
+
+Az otthoni felhasználó megadja hogy mi legyen mindig otthon, ha valami elfogy vagy lerjár az alkalmazás automatikusan rendel abból ami nincs.
+(((Az otthoni felhasználó kap ajánlott recepteket attól függően hogy mi van otthon és mi fog lejárni leghamarabb. Beállítható hogy vegán/stb.)))
+A futár felhasználó megkapja a rendelést 1/2/3 naponta vagy beállított időközönként és házhoz viszi.
