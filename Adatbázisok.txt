@@ -1,6 +1,7 @@
 együtt dolgozik:
 Kósa Patrik; frontend (html, css), dokumentáció
 Száz Bence; backend (js, SQL)
+Őri Milán; backend
 név; Kamrapp (Kamra-app)
 
 Adatbázisok:
