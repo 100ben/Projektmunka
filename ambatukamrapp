@@ -30,3 +30,26 @@ VALUES
     ('Görög natúr joghurt', '2026-10-09', 'tej', FALSE, 500, 'gramm'),
     ('Paradicsom', '2026-10-02', NULL, TRUE, 1, 'kg'),
     ('Mandula', '2027-05-15', 'diófélék', TRUE, 150, 'gramm');
+
+CREATE TABLE felhasznalok (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    felhasznalo_tipus ENUM('Futár', 'Vevő') NOT NULL,
+    nev VARCHAR(100) NOT NULL,
+    szuletesi_datum DATE NOT NULL,
+    kiszallitasi_hely VARCHAR(255) NOT NULL,
+    jelszo VARCHAR(255) NOT NULL
+);
+
+INSERT INTO felhasznalok 
+    (felhasznalo_tipus, nev, szuletesi_datum, kiszallitasi_hely, jelszo)
+VALUES
+    ('Futár', 'Jarjar', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
+    ('Vevő', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
+    ('Vevő', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
+    ('Futár', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
+    ('Vevő', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
+    ('Vevő', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
+    ('Futár', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
+    ('Vevő', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
+    ('Vevő', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
+    ('Futár', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');
