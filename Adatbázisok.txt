@@ -29,6 +29,24 @@ MÉRTÉKEGYSÉG 		db/liter/gramm/kg
 
 
 
+
+CREATE DATABASE grocery_db
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_hungarian_ci;
+
+USE grocery_db;
+
+CREATE TABLE termekek (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    termek_nev VARCHAR(255) NOT NULL,
+    lejarat DATE,
+    allergenek VARCHAR(500),
+    vegan_e BOOLEAN NOT NULL DEFAULT FALSE,
+    mennyiseg DECIMAL(10,2),
+    mertekegyseg ENUM('db', 'liter', 'gramm', 'kg') NOT NULL
+) CHARACTER SET utf8mb4
+  COLLATE utf8mb4_hungarian_ci;
+
 INSERT INTO termekek
     (termek_nev, lejarat, allergenek, vegan_e, mennyiseg, mertekegyseg)
 VALUES
