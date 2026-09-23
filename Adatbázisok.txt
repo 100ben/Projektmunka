@@ -11,7 +11,7 @@ Adatbázisok:
 először a felhasználó bejelentkezik és elmenti a saját fiókjára hogy miket vásárolt. ezt az adatbázis számon tartja. Eközben, a mai dátumhoz mérve, a program automatikusan nézi, hogy lejár-e. Minden alkalommal amikor a vásárló feljegyzi miből mennyit vett(vagy kiválasztja, vagy rákeres begépeléssel) ezt hozzáadja az adatbázishoz. ha bármit elhasznál, azt kiválasztja hogy mit és mennyit.
 *a mennyiséget termékek alapján háromféle mértékegységek alapján méri; g-kg, dl-l és db. adatban csak gramm, deciliter és darab formában menti el a mennyiségét egyes áruknak, de megjelenítésben ha lehet, a grammnál dkg-tól kg-ig, míg a deciliternél literre.
 4. felhasználók és futárok adatbázisa
-__________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________
 | Felhasználó típus |   Név            | Születési dátum  |    Kiszállítási hely                     |   Jelszó              |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Futár             |   Jarjar         | 2001. 09. 11.    |    Kiskunfélegyháza, Köztársaság út 67.  |   envagyokjarjar123   |
@@ -30,3 +30,13 @@ ALERGÉNEK
 VEGÁN-E
 MENNYISÉG
 MÉRTÉKEGYSÉG 		db/liter/gramm/kg
+
+
+
+USERS
+id
+felhasz_tipus
+nev
+szul_dat
+hely
+jelszo
