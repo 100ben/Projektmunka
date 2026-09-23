@@ -25,3 +25,15 @@ ALERGÉNEK
 VEGÁN-E
 MENNYISÉG
 MÉRTÉKEGYSÉG 		db/liter/gramm/kg
+
+
+
+
+INSERT INTO termekek
+    (termek_nev, lejarat, allergenek, vegan_e, mennyiseg, mertekegyseg)
+VALUES
+    ('Tej', '2026-10-05', 'tej', FALSE, 1, 'liter'),
+    ('Kenyér', '2026-09-28', 'glutén', FALSE, 500, 'gramm'),
+    ('Alma', '2026-10-15', NULL, TRUE, 1, 'kg'),
+    ('Tofu', '2026-10-10', 'szója', TRUE, 400, 'gramm'),
+    ('Sajt', '2026-10-20', 'tej', FALSE, 250, 'gramm');
