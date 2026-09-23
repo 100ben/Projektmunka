@@ -10,8 +10,13 @@ Adatbázisok:
 3. egy ideiglenesen generált adatbázis, amelyik kilistázza, hogy miből kell otthonra újat szállítani (a vásárló felhasználó adja meg az adatokat hogy mikor fogy el egy kívánt termékből valamije, a lejárást mindig a mai dátumhoz képest automatikusan nézi. ezt az adatbázist majd a futár felhasználó kapja meg)
 először a felhasználó bejelentkezik és elmenti a saját fiókjára hogy miket vásárolt. ezt az adatbázis számon tartja. Eközben, a mai dátumhoz mérve, a program automatikusan nézi, hogy lejár-e. Minden alkalommal amikor a vásárló feljegyzi miből mennyit vett(vagy kiválasztja, vagy rákeres begépeléssel) ezt hozzáadja az adatbázishoz. ha bármit elhasznál, azt kiválasztja hogy mit és mennyit.
 *a mennyiséget termékek alapján háromféle mértékegységek alapján méri; g-kg, dl-l és db. adatban csak gramm, deciliter és darab formában menti el a mennyiségét egyes áruknak, de megjelenítésben ha lehet, a grammnál dkg-tól kg-ig, míg a deciliternél literre.
-
-
+4. felhasználók és futárok adatbázisa
+__________________________________________________________________________________________________________________________
+| Felhasználó típus |   Név           Születési dátum  |    Kiszállítási hely                     |   Jelszó              |
+|-------------------------------------------------------------------------------------------------------------------------|
+| Futár             |   Jarjar        2001. 09. 11.    |    Kiskunfélegyháza, Köztársaság út 67.  |   envagyokjarjar123   |
+| Vevő              |   Tóth Emília   1879. 02. 31.    |    Kisujjbánya, Bánya utca 69.           |   !#jajjidemitirjak#! |
+|___________________|__________________________________|__________________________________________|_______________________|
 
 
 Az otthoni felhasználó megadja hogy mi legyen mindig otthon, ha valami elfogy vagy lerjár az alkalmazás automatikusan rendel abból ami nincs.
@@ -25,8 +30,3 @@ ALERGÉNEK
 VEGÁN-E
 MENNYISÉG
 MÉRTÉKEGYSÉG 		db/liter/gramm/kg
-
-
-
-
-
