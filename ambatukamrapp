@@ -44,7 +44,7 @@ INSERT INTO felhasznalok
     (felhasznalo_tipus, nev, szuletesi_datum, kiszallitasi_hely, jelszo)
 VALUES
     ('Futár', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
-    ('Futár', 'Bicskey Lukács', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
+    ('Futár', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
     ('Vevő', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
     ('Vevő', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
     ('Futár', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
