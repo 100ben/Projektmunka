@@ -103,7 +103,18 @@ a{color:var(--accent); font-weight:600}
               <button type="button" class="toggle" id="t" aria-controls="pw">Show</button>
             </div>
             <p class="err" id="e2" role="alert"></p>
-            <input id="rem" type="checkbox"></button>Futár <input id="rem" type="checkbox"></button>Vevő
+            <div class="button-toggle-group">
+              <label class="toggle-button">
+               <input type="radio" name="view-mode" value="grid" checked />
+                <span>Futár vagyok</span>
+              </label>
+  
+              <label class="toggle-button">
+                <input type="radio" name="view-mode" value="list" />
+                <span>Vevő vagyok</span>
+              </label>
+            </div>
+          </div> 
       </div>
 
       <div class="row">
