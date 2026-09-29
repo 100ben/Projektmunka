@@ -4,3 +4,10 @@ jelszo
 futár vagy vevő radio button
 
 helyes bejelentkezés után attól függően hogy vevő vagy futár, átdob egy táblázatokat megjelenítő oldalra.
+
+
+
+később:
+két opció, bejelentkezés vagy regisztárlás,
+regisztráláskor készit neki egy saját táblát, a saját neve alatt.
+bejelentkezés után erre a saját táblára írhat fel vett dolgokat a vevő vagy éppen törölhet le amit elhasznált/magától letörlődik a lejárati dátum miatt
