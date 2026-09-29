@@ -11,3 +11,8 @@ később:
 két opció, bejelentkezés vagy regisztárlás,
 regisztráláskor készit neki egy saját táblát, a saját neve alatt.
 bejelentkezés után erre a saját táblára írhat fel vett dolgokat a vevő vagy éppen törölhet le amit elhasznált/magától letörlődik a lejárati dátum miatt
+
+
+
+
+backend: össze kell kötni a html-t az adatbázis táblákkal hogy lehessen módosítani is a htmlből
