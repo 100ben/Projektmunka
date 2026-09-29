@@ -1,6 +1,6 @@
-create database kamrapp
-	character set utf8mb4
-    collate utf8mb4_hungarian_ci
+CREATE DATABASE kamrapp
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_hungarian_ci;
 
 USE kamrapp;
 
@@ -11,7 +11,7 @@ CREATE TABLE termekek (
     allergenek VARCHAR(500),
     vegan_e BOOLEAN NOT NULL DEFAULT FALSE,
     mennyiseg DECIMAL(10,2),
-    mertekegyseg ENUM('db', 'liter', 'gramm', 'kg') NOT NULL
+    mertekegyseg ENUM('db', 'liter', 'gramm', 'kg', 'dkg') NOT NULL
 ) CHARACTER SET utf8mb4
   COLLATE utf8mb4_hungarian_ci;
 
@@ -22,7 +22,7 @@ VALUES
     ('Kenyér', '2026-09-28', 'glutén', FALSE, 500, 'gramm'),
     ('Alma', '2026-10-15', NULL, TRUE, 1, 'kg'),
     ('Tofu', '2026-10-10', 'szója', TRUE, 400, 'gramm'),
-    ('Sajt', '2026-10-20', 'tej', FALSE, 250, 'gramm');
+    ('Sajt', '2026-10-20', 'tej', FALSE, 250, 'gramm'),
     ('Zabtej', '2026-11-12', 'glutén', TRUE, 1, 'liter'),
     ('Tojás (10db)', '2026-10-18', 'tojás', FALSE, 10, 'db'),
     ('Mogyorókrém', '2027-03-01', 'mogyoró, tej, szója', FALSE, 400, 'gramm'),
@@ -33,7 +33,7 @@ VALUES
 
 CREATE TABLE felhasznalok (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    felhasznalo_tipus ENUM('Futár', 'Vevő') NOT NULL,
+    felhasznalo_tipus ENUM('v', 'f') NOT NULL,
     nev VARCHAR(100) NOT NULL,
     szuletesi_datum DATE NOT NULL,
     kiszallitasi_hely VARCHAR(255) NOT NULL,
@@ -43,14 +43,14 @@ CREATE TABLE felhasznalok (
 INSERT INTO felhasznalok 
     (felhasznalo_tipus, nev, szuletesi_datum, kiszallitasi_hely, jelszo)
 VALUES
-    ('Futár', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
-    ('Futár', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
-    ('Vevő', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
-    ('Vevő', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
-    ('Futár', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
-    ('Vevő', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
-    ('Vevő', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
-    ('Futár', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
-    ('Vevő', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
-    ('Vevő', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
-    ('Futár', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');
+    ('f', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
+    ('f', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
+    ('v', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
+    ('v', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
+    ('f', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
+    ('v', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
+    ('v', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
+    ('f', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
+    ('v', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
+    ('v', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
+    ('f', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');
