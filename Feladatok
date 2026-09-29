@@ -3,3 +3,4 @@ Felhasználónév,
 jelszo
 futár vagy vevő radio button
 
+helyes bejelentkezés után attól függően hogy vevő vagy futár, átdob egy táblázatokat megjelenítő oldalra.
