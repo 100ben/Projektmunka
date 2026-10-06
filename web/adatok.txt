@@ -1,0 +1,11 @@
+ ('f', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
+('f', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
+('v', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
+('v', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
+('f', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
+('v', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
+('v', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
+('f', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
+('v', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
+('v', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
+('f', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');

@@ -13,6 +13,7 @@ const adatok = [
   ['f', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan'],
 ];
 
+let felhasznalok = localStorage.getItem(adatok)
 const form = document.querySelector('form');
 
 // Message line under the button (created here, so index.html needs no changes)
@@ -44,3 +45,5 @@ form.addEventListener('submit', function (e) {
     uzenet.textContent = 'Hibás felhasználónév, jelszó vagy felhasználó típus.';
   }
 });
+console.log(felhasznalok)
+localStorage.setItem("felhasznalok", [adatok])

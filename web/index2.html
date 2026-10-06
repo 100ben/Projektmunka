@@ -1,0 +1,171 @@
+<!DOCTYPE html> <html lang="hu"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Kamrapp - Bejelentkezés</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #8b0000, #e53935);
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 40px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+        text-align: center;
+        color: #c62828;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+
+    label {
+        color: #333;
+        font-weight: bold;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #e53935;
+        box-shadow: 0 0 5px rgba(229, 57, 53, 0.3);
+    }
+
+    .user-type {
+        margin: 25px 0;
+    }
+
+    .user-type p {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    .radio-option {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .radio-option input {
+        margin-right: 6px;
+        accent-color: #e53935;
+    }
+
+    button {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 8px;
+        background-color: #e53935;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #c62828;
+        
+        box-shadow: 0 5px 15px rgba(198, 40, 40, 0.3);
+    }
+
+    button:active {
+        transform: translateY(0);
+    }
+    #reg{
+      text-decoration: none;
+        color: red;
+        font-size: 17px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+        margin: auto;
+        display: block;
+        padding: 10px;
+
+
+    }
+</style>
+
+</head> <body>
+<div class="login-container">
+
+    <h1>Regisztráció</h1>
+
+    <form action="login.php" method="POST" >
+
+        <div class="input-group">
+            <label for="nev">Felhasználónév:</label>
+            <input type="text" id="nev" name="nev" required>
+        </div>
+
+        <div class="input-group">
+            <label for="jelszo">Jelszó:</label>
+            <input type="password" id="jelszo" name="jelszo" required>
+        </div>
+        <div class="input-group">
+            <label for="jelszo">Születési idő:</label>
+            <input type="text" id="szulido" name="szulido" required>
+        </div>
+        <div class="input-group">
+            <label for="nev">Lakcím:</label>
+            <input type="text" id="lakcim" name="lakcim" required>
+        </div>
+
+        <div class="user-type">
+            <p>Felhasználó típusa:</p>
+
+            <label class="radio-option" for="vevo">
+                <input type="radio" id="vevo" name="felhasznalo_tipus" value="v" required>
+                Vevő
+            </label>
+
+            <label class="radio-option" for="futar">
+                <input type="radio" id="futar" name="felhasznalo_tipus" value="f" required>
+                Futár
+            </label>
+        </div>
+
+        <button type="submit">Bejelentkezés</button>
+        <a href="index.html" id="reg">Vissza a bejelentkezéshez</a>
+
+    </form>
+
+</div>
+<script src="script.js"></script> 
+</body>
+</html>
