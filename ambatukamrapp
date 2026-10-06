@@ -4,35 +4,8 @@ CREATE DATABASE kamrapp
 
 USE kamrapp;
 
-CREATE TABLE termekek (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    termek_nev VARCHAR(255) NOT NULL,
-    lejarat DATE,
-    allergenek VARCHAR(500),
-    vegan_e BOOLEAN NOT NULL DEFAULT FALSE,
-    mennyiseg DECIMAL(10,2),
-    mertekegyseg ENUM('db', 'liter', 'gramm', 'kg', 'dkg') NOT NULL
-) CHARACTER SET utf8mb4
-  COLLATE utf8mb4_hungarian_ci;
-
-INSERT INTO termekek
-    (termek_nev, lejarat, allergenek, vegan_e, mennyiseg, mertekegyseg)
-VALUES
-    ('Tej', '2026-10-05', 'tej', FALSE, 1, 'liter'),
-    ('Kenyér', '2026-09-28', 'glutén', FALSE, 500, 'gramm'),
-    ('Alma', '2026-10-15', NULL, TRUE, 1, 'kg'),
-    ('Tofu', '2026-10-10', 'szója', TRUE, 400, 'gramm'),
-    ('Sajt', '2026-10-20', 'tej', FALSE, 250, 'gramm'),
-    ('Zabtej', '2026-11-12', 'glutén', TRUE, 1, 'liter'),
-    ('Tojás (10db)', '2026-10-18', 'tojás', FALSE, 10, 'db'),
-    ('Mogyorókrém', '2027-03-01', 'mogyoró, tej, szója', FALSE, 400, 'gramm'),
-    ('Burgonya', '2026-11-30', NULL, TRUE, 2.5, 'kg'),
-    ('Görög natúr joghurt', '2026-10-09', 'tej', FALSE, 500, 'gramm'),
-    ('Paradicsom', '2026-10-02', NULL, TRUE, 1, 'kg'),
-    ('Mandula', '2027-05-15', 'diófélék', TRUE, 150, 'gramm');
-
 CREATE TABLE felhasznalok (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT PRIMARY KEY,
     felhasznalo_tipus ENUM('v', 'f') NOT NULL,
     nev VARCHAR(100) NOT NULL,
     szuletesi_datum DATE NOT NULL,
@@ -41,16 +14,46 @@ CREATE TABLE felhasznalok (
 );
 
 INSERT INTO felhasznalok 
-    (felhasznalo_tipus, nev, szuletesi_datum, kiszallitasi_hely, jelszo)
+    (user_id, felhasznalo_tipus, nev, szuletesi_datum, kiszallitasi_hely, jelszo)
 VALUES
-    ('f', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
-    ('f', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
-    ('v', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
-    ('v', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
-    ('f', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
-    ('v', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
-    ('v', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
-    ('f', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
-    ('v', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
-    ('v', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
-    ('f', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');
+    (1, 'f', 'Kelemen Járó', '2001-09-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'envagyokjarjar123'),
+    (2, 'f', 'Lukács Bicskey', '1961-03-11', 'Kiskunfélegyháza, Köztársaság út 67.', 'actuallyenvagyokjarjar123'),
+    (3, 'v', 'Tóth Emília', '1879-02-28', 'Kisujjbánya, Bánya utca 69.', '!#jajjidemitirjak#!'),
+    (4, 'v', 'Kovács János', '1988-04-12', 'Budapest, Váci út 14.', 'titkosjelszo2024'),
+    (5, 'f', 'Szabó Péter', '1995-11-23', 'Szeged, Tisza Lajos körút 45.', 'speedy_delivery95'),
+    (6, 'v', 'Nagy Anita', '1992-07-02', 'Debrecen, Piac utca 8.', 'anita_pass_92'),
+    (7, 'v', 'Kiss Gábor', '2003-01-15', 'Győr, Baross Gábor út 12.', 'jelszavam123'),
+    (8, 'f', 'Molnár Dávid', '1999-09-09', 'Pécs, Király utca 31.', 'futarkod_99'),
+    (9, 'v', 'Farkas Eszter', '1985-05-20', 'Miskolc, Széchenyi István utca 54.', 'eszti_miskolc'),
+    (10, 'v', 'Horváth Balázs', '1990-12-30', 'Székesfehérvár, Fő utca 3.', 'balazs_szfv_90'),
+    (11, 'f', 'Németh Zoltán', '1994-03-17', 'Kecskemét, Petőfi Sándor utca 22.', 'zolika_bringan');
+
+USE kamrapp;
+
+CREATE TABLE termekek (
+    user_id INT,
+    termek_nev VARCHAR(255) NOT NULL,
+    lejarat DATE,
+    allergenek VARCHAR(500),
+    vegan_e BOOLEAN NOT NULL DEFAULT FALSE,
+    mennyiseg DECIMAL(10,2),
+    mertekegyseg ENUM('db', 'liter', 'gramm', 'kg', 'dkg') NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES felhasznalok(user_id)
+) CHARACTER SET utf8mb4
+  COLLATE utf8mb4_hungarian_ci;
+
+INSERT INTO termekek
+    (user_id, termek_nev, lejarat, allergenek, vegan_e, mennyiseg, mertekegyseg)
+VALUES
+    (6, 'Tej', '2026-10-05', 'tej', FALSE, 1, 'liter'),
+    (7, 'Kenyér', '2026-09-28', 'glutén', FALSE, 500, 'gramm'),
+    (7, 'Alma', '2026-10-15', NULL, TRUE, 1, 'kg'),
+    (3, 'Tofu', '2026-10-10', 'szója', TRUE, 400, 'gramm'),
+    (10, 'Sajt', '2026-10-20', 'tej', FALSE, 250, 'gramm'),
+    (9, 'Zabtej', '2026-11-12', 'glutén', TRUE, 1, 'liter'),
+    (6, 'Tojás (10db)', '2026-10-18', 'tojás', FALSE, 10, 'db'),
+    (9, 'Mogyorókrém', '2027-03-01', 'mogyoró, tej, szója', FALSE, 400, 'gramm'),
+    (9, 'Burgonya', '2026-11-30', NULL, TRUE, 2.5, 'kg'),
+    (9, 'Görög natúr joghurt', '2026-10-09', 'tej', FALSE, 500, 'gramm'),
+    (3, 'Paradicsom', '2026-10-02', NULL, TRUE, 1, 'kg'),
+    (10, 'Mandula', '2027-05-15', 'diófélék', TRUE, 150, 'gramm');
