@@ -19,6 +19,13 @@ ________________________________________________________________________________
 |_Vevő______________|___Jancsik_Károly_|_1526._32._12.____|____Ferencködörönc,_Fehérvári_Út_42.______|___+yelszo12346!_______|
 
 
+EGY NAGY ADATBÁZIS a kajáknak
+legyen userid, kaja id, sstb stb minden részlete a kajáknak és az hogy kihez tartoznak.
+egy desired kaja adatbázis, ugyan az mint az előző kb.
+
+egy adatbázis a felhasználóknak, amiben a bejelentkezéses adataik és kiszállítás van elmentve
+
+
 Az otthoni felhasználó megadja hogy mi legyen mindig otthon, ha valami elfogy vagy lerjár az alkalmazás automatikusan rendel abból ami nincs.
 (((Az otthoni felhasználó kap ajánlott recepteket attól függően hogy mi van otthon és mi fog lejárni leghamarabb. Beállítható hogy vegán/stb.)))
 A futár felhasználó megkapja a rendelést 1/2/3 naponta vagy beállított időközönként és házhoz viszi.
