@@ -7,10 +7,22 @@ helyes bejelentkezés után attól függően hogy vevő vagy futár, átdob egy 
 
 
 
+KÉT NAGY ADATBÁZIS a kajáknak
+1. legyen userid, kaja id, stb stb minden részlete a kajáknak és az hogy kihez tartoznak.
+
+2. egy desired kaja adatbázis, ugyan az mint az előző kb.
+
+egy adatbázis a felhasználóknak, amiben a bejelentkezéses adataik és kiszállítás van elmentve
+
+
+
 később:
 két opció, bejelentkezés vagy regisztárlás,
 regisztráláskor készit neki egy saját táblát, a saját neve alatt.
 bejelentkezés után erre a saját táblára írhat fel vett dolgokat a vevő vagy éppen törölhet le amit elhasznált/magától letörlődik a lejárati dátum miatt
+
+
+
 
 
 
